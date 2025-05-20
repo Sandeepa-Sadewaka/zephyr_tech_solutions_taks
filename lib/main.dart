@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zephyr_tech_solutions_taks/home_screen.dart';
+import 'package:zephyr_tech_solutions_taks/component/bottom_nav.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const HomeScreen(),
+      home: BottomNavDemo(), // Use BottomNav as the home widget
     );
   }
 }
