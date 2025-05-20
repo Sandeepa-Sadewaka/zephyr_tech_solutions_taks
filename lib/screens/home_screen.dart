@@ -15,15 +15,20 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Text(
-          'Hi Ehi',
-          style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.w600),
+          'Hi Ehi,',
+          style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.w600, color: Colors.grey),
         ),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.notifications_none_outlined),
-            onPressed: () {},
+          Padding(
+            padding: const EdgeInsets.only(right: 15),
+            child: IconButton(
+              
+              icon: const Icon(Icons.notifications_none_outlined, size: 30),
+              onPressed: () {},
+            ),
           ),
         ],
+        
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
@@ -86,82 +91,88 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 20),
             Row(
               children: [
-                Container(
-                  height: 160,
-                  width: 160,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(255, 237, 237, 237),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 1,
-                        blurRadius: 5,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(11),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Icon(Icons.send_to_mobile_outlined, size: 40),
-                        const SizedBox(height: 10),
-                        Text(
-                          "Pay someone",
-                          style: GoogleFonts.poppins(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-
-                        const SizedBox(height: 13),
-                        Text(
-                          "To  wallet, bank or mobile number",
-                          style: TextStyle(fontSize: 13),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Container(
+                    height: 160,
+                    width: 160,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: const Color.fromARGB(255, 237, 237, 237),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 1,
+                          blurRadius: 5,
+                          offset: const Offset(0, 3),
                         ),
                       ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(11),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(Icons.send_to_mobile_outlined, size: 40),
+                          const SizedBox(height: 10),
+                          Text(
+                            "Pay someone",
+                            style: GoogleFonts.poppins(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                  
+                          const SizedBox(height: 13),
+                          Text(
+                            "To  wallet, bank or mobile number",
+                            style: TextStyle(fontSize: 13),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 Spacer(),
-                Container(
-                  height: 160,
-                  width: 160,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(123, 167, 198, 183),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 1,
-                        blurRadius: 5,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(11),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Icon(Icons.attach_money_outlined, size: 40),
-                        const SizedBox(height: 10),
-                        Text(
-                          "Request money",
-                          style: GoogleFonts.poppins(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-
-                        const SizedBox(height: 13),
-                        Text(
-                          "Request money from OrboPay users",
-                          style: TextStyle(fontSize: 13),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Container(
+                    height: 160,
+                    width: 160,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: const Color.fromARGB(123, 167, 198, 183),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 1,
+                          blurRadius: 5,
+                          offset: const Offset(0, 3),
                         ),
                       ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(11),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(Icons.attach_money_outlined, size: 40),
+                          const SizedBox(height: 10),
+                          Text(
+                            "Request money",
+                            style: GoogleFonts.poppins(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                  
+                          const SizedBox(height: 13),
+                          Text(
+                            "Request money from OrboPay users",
+                            style: TextStyle(fontSize: 13),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -171,81 +182,87 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 20),
             Row(
               children: [
-                Container(
-                  height: 160,
-                  width: 160,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(255, 237, 237, 237),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 1,
-                        blurRadius: 5,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(11),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Icon(Icons.mobile_friendly_outlined, size: 40),
-                        const SizedBox(height: 10),
-                        Text(
-                          "Buy airtime",
-                          style: GoogleFonts.poppins(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        const SizedBox(height: 13),
-                        Text(
-                          "Top-up or send airtime acrosss Africa",
-                          style: TextStyle(fontSize: 13),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Container(
+                    height: 160,
+                    width: 160,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: const Color.fromARGB(255, 237, 237, 237),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 1,
+                          blurRadius: 5,
+                          offset: const Offset(0, 3),
                         ),
                       ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(11),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(Icons.mobile_friendly_outlined, size: 40),
+                          const SizedBox(height: 10),
+                          Text(
+                            "Buy airtime",
+                            style: GoogleFonts.poppins(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          const SizedBox(height: 13),
+                          Text(
+                            "Top-up or send airtime acrosss Africa",
+                            style: TextStyle(fontSize: 13),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 Spacer(),
-                Container(
-                  height: 160,
-                  width: 160,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(255, 237, 237, 237),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 1,
-                        blurRadius: 5,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(11),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Icon(Icons.payment_outlined, size: 40),
-                        const SizedBox(height: 10),
-                        Text(
-                          "Pay bill",
-                          style: GoogleFonts.poppins(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-
-                        const SizedBox(height: 13),
-                        Text(
-                          "Zero transaction fees when you pay",
-                          style: TextStyle(fontSize: 13),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Container(
+                    height: 160,
+                    width: 160,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: const Color.fromARGB(255, 237, 237, 237),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 1,
+                          blurRadius: 5,
+                          offset: const Offset(0, 3),
                         ),
                       ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(11),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(Icons.payment_outlined, size: 40),
+                          const SizedBox(height: 10),
+                          Text(
+                            "Pay bill",
+                            style: GoogleFonts.poppins(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                  
+                          const SizedBox(height: 13),
+                          Text(
+                            "Zero transaction fees when you pay",
+                            style: TextStyle(fontSize: 13),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -310,7 +327,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       SizedBox(height: 14),
                       Text(
-                        "Ehi L.",
+                        "Grace L.",
                         style: GoogleFonts.poppins(
                           fontSize: 12,
                           fontWeight: FontWeight.w600,
