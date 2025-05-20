@@ -327,7 +327,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       SizedBox(height: 14),
                       Text(
-                        "Ehi L.",
+                        "Grace L.",
                         style: GoogleFonts.poppins(
                           fontSize: 12,
                           fontWeight: FontWeight.w600,
