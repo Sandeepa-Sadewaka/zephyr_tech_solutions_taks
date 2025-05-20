@@ -16,20 +16,52 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text(
-          'Hi Ehi,',
-          style: GoogleFonts.poppins(
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-            color: Colors.grey,
+        title: Padding(
+          padding: const EdgeInsets.only(left: 10),
+          child: Text(
+            'Hi Ehi,',
+            style: GoogleFonts.poppins(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              color: Colors.grey,
+            ),
           ),
         ),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 15),
-            child: IconButton(
-              icon: const Icon(Icons.notifications_none_outlined, size: 30),
-              onPressed: () {},
+            child: Stack(
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.notifications_none_outlined, size: 30),
+                  onPressed: () {
+                    // Add your onPressed functionality here
+                  },
+                ),
+                Positioned(
+                  right: 6,
+                  top: 6,
+                  child: Container(
+                    padding: const EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    constraints: const BoxConstraints(
+                      minWidth: 12,
+                      minHeight: 12,
+                    ),
+                    child: const Text(
+                      '2',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 8,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
@@ -147,9 +179,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 60,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
-                          color: const Color.fromARGB(255, 209, 209, 209),
+                          color: const Color.fromARGB(255, 225, 224, 224),
                         ),
-                        child: Icon(Icons.add, size: 30, color: Colors.black),
+                        child: Icon(Icons.add, size: 30, color: Colors.grey),
                       ),
                       SizedBox(height: 14),
                       Text(
