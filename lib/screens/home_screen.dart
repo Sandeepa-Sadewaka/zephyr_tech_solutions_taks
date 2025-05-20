@@ -260,10 +260,102 @@ class _HomeScreenState extends State<HomeScreen> {
                 fontWeight: FontWeight.w600,
               ),
             ),
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        height: 60,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: const Color.fromARGB(255, 209, 209, 209),
+                        ),
+                        child: Icon(Icons.add, size: 30, color: Colors.black),
+                      ),
+                      SizedBox(height: 14),
+                      Text(
+                        "Add",
+                        style: GoogleFonts.poppins(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width: 15),
+                  Column(
+                    children: [
+                      Stack(
+                        children: [
+                          CircleAvatar(
+                            backgroundImage: AssetImage("assets/images/girl.png"),
+                            radius: 30,
+                          ),
+                          Positioned(
+                            bottom: 0,
+                            right: 0,
+                            child: CircleAvatar(
+                              backgroundImage: AssetImage(
+                                "assets/images/flag1.png",
+                              ),
+                              radius: 10,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 14),
+                      Text(
+                        "Ehi L.",
+                        style: GoogleFonts.poppins(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width: 15),
+                  
+                  Column(
+                    children: [
+                      Stack(
+                        children: [
+                          CircleAvatar(
+                            backgroundImage: AssetImage("assets/images/LA.png"),
+                            radius: 30,
+                          ),
+                          Positioned(
+                            bottom: 0,
+                            right: 0,
+                            child: CircleAvatar(
+                              backgroundImage: AssetImage(
+                                "assets/images/flag1.png",
+                              ),
+                              radius: 10,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 14),
+                      Text(
+                        "Lawrence A.",
+                        style: GoogleFonts.poppins(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-
