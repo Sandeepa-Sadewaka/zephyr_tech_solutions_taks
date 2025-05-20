@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:zephyr_tech_solutions_taks/component/friend_card.dart';
+import 'package:zephyr_tech_solutions_taks/component/option_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,19 +18,21 @@ class _HomeScreenState extends State<HomeScreen> {
         automaticallyImplyLeading: false,
         title: Text(
           'Hi Ehi,',
-          style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.w600, color: Colors.grey),
+          style: GoogleFonts.poppins(
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+            color: Colors.grey,
+          ),
         ),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 15),
             child: IconButton(
-              
               icon: const Icon(Icons.notifications_none_outlined, size: 30),
               onPressed: () {},
             ),
           ),
         ],
-        
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
@@ -39,47 +43,43 @@ class _HomeScreenState extends State<HomeScreen> {
             // Balance Card
             Padding(
               padding: const EdgeInsets.only(left: 10),
-              child: Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      '1,234.00',
-                      style: GoogleFonts.poppins(
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '1,234.00',
+                    style: GoogleFonts.poppins(
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: AssetImage(
+                          "assets/images/flag1.png",
+                        ),
+                        radius: 10,
                       ),
-                    ),
-                    const SizedBox(height: 4),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        CircleAvatar(
-                          backgroundImage: AssetImage(
-                            "assets/images/flag1.png",
-                          ),
-                          radius: 10,
+                      SizedBox(width: 10),
+                      Text(
+                        'GHS',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          color: Colors.grey[600],
                         ),
-                        SizedBox(width: 10),
-                        Text(
-                          'GHS',
-                          style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            color: Colors.grey[600],
-                          ),
-                        ),
-                        SizedBox(width: 20),
-                        Icon(Icons.arrow_drop_down_sharp),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                      SizedBox(width: 20),
+                      Icon(Icons.arrow_drop_down_sharp),
+                    ],
+                  ),
+                ],
               ),
             ),
 
             const SizedBox(height: 40),
-
-            // Quick Actions
             Text(
               'Here are some things you can do',
               style: GoogleFonts.poppins(
@@ -91,90 +91,18 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 20),
             Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Container(
-                    height: 160,
-                    width: 160,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: const Color.fromARGB(255, 237, 237, 237),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 1,
-                          blurRadius: 5,
-                          offset: const Offset(0, 3),
-                        ),
-                      ],
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(11),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(Icons.send_to_mobile_outlined, size: 40),
-                          const SizedBox(height: 10),
-                          Text(
-                            "Pay someone",
-                            style: GoogleFonts.poppins(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                  
-                          const SizedBox(height: 13),
-                          Text(
-                            "To  wallet, bank or mobile number",
-                            style: TextStyle(fontSize: 13),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                OptionCard(
+                  icon: Icon(Icons.send_to_mobile_outlined),
+                  title: 'Pay someone',
+                  description: 'To  wallet, bank or mobile number',
+                  color: const Color.fromARGB(255, 237, 237, 237),
                 ),
                 Spacer(),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Container(
-                    height: 160,
-                    width: 160,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: const Color.fromARGB(123, 167, 198, 183),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 1,
-                          blurRadius: 5,
-                          offset: const Offset(0, 3),
-                        ),
-                      ],
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(11),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(Icons.attach_money_outlined, size: 40),
-                          const SizedBox(height: 10),
-                          Text(
-                            "Request money",
-                            style: GoogleFonts.poppins(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                  
-                          const SizedBox(height: 13),
-                          Text(
-                            "Request money from OrboPay users",
-                            style: TextStyle(fontSize: 13),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                OptionCard(
+                  icon: Icon(Icons.attach_money_outlined),
+                  title: 'Request money',
+                  description: 'Request money from OrboPay users',
+                  color: const Color.fromARGB(123, 167, 198, 183),
                 ),
               ],
             ),
@@ -182,89 +110,18 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 20),
             Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Container(
-                    height: 160,
-                    width: 160,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: const Color.fromARGB(255, 237, 237, 237),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 1,
-                          blurRadius: 5,
-                          offset: const Offset(0, 3),
-                        ),
-                      ],
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(11),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(Icons.mobile_friendly_outlined, size: 40),
-                          const SizedBox(height: 10),
-                          Text(
-                            "Buy airtime",
-                            style: GoogleFonts.poppins(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          const SizedBox(height: 13),
-                          Text(
-                            "Top-up or send airtime acrosss Africa",
-                            style: TextStyle(fontSize: 13),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                OptionCard(
+                  icon: Icon(Icons.mobile_friendly_outlined),
+                  title: 'Buy airtime',
+                  description: "Top-up or send airtime acrosss Africa",
+                  color: const Color.fromARGB(255, 237, 237, 237),
                 ),
                 Spacer(),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Container(
-                    height: 160,
-                    width: 160,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: const Color.fromARGB(255, 237, 237, 237),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 1,
-                          blurRadius: 5,
-                          offset: const Offset(0, 3),
-                        ),
-                      ],
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(11),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(Icons.payment_outlined, size: 40),
-                          const SizedBox(height: 10),
-                          Text(
-                            "Pay bill",
-                            style: GoogleFonts.poppins(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                  
-                          const SizedBox(height: 13),
-                          Text(
-                            "Zero transaction fees when you pay",
-                            style: TextStyle(fontSize: 13),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                OptionCard(
+                  icon: Icon(Icons.payment_outlined),
+                  title: "Pay bill",
+                  description: 'Zero transaction fees when you pay',
+                  color: const Color.fromARGB(255, 237, 237, 237),
                 ),
               ],
             ),
@@ -307,63 +164,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(width: 15),
                   Column(
                     children: [
-                      Stack(
-                        children: [
-                          CircleAvatar(
-                            backgroundImage: AssetImage("assets/images/girl.png"),
-                            radius: 30,
-                          ),
-                          Positioned(
-                            bottom: 0,
-                            right: 0,
-                            child: CircleAvatar(
-                              backgroundImage: AssetImage(
-                                "assets/images/flag1.png",
-                              ),
-                              radius: 10,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 14),
-                      Text(
-                        "Grace L.",
-                        style: GoogleFonts.poppins(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                        ),
+                      FriendCard(
+                        image_url: "assets/images/girl.png",
+                        name: "Grace L.",
                       ),
                     ],
                   ),
                   SizedBox(width: 15),
-                  
+
                   Column(
                     children: [
-                      Stack(
-                        children: [
-                          CircleAvatar(
-                            backgroundImage: AssetImage("assets/images/LA.png"),
-                            radius: 30,
-                          ),
-                          Positioned(
-                            bottom: 0,
-                            right: 0,
-                            child: CircleAvatar(
-                              backgroundImage: AssetImage(
-                                "assets/images/flag1.png",
-                              ),
-                              radius: 10,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 14),
-                      Text(
-                        "Lawrence A.",
-                        style: GoogleFonts.poppins(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                        ),
+                      FriendCard(
+                        image_url: "assets/images/LA.png",
+                        name: "Lawrence A.",
                       ),
                     ],
                   ),
