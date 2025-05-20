@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:zephyr_tech_solutions_taks/component/friend_card.dart';
 import 'package:zephyr_tech_solutions_taks/component/option_card.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -42,41 +43,39 @@ class _HomeScreenState extends State<HomeScreen> {
             // Balance Card
             Padding(
               padding: const EdgeInsets.only(left: 10),
-              child: Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      '1,234.00',
-                      style: GoogleFonts.poppins(
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '1,234.00',
+                    style: GoogleFonts.poppins(
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: AssetImage(
+                          "assets/images/flag1.png",
+                        ),
+                        radius: 10,
                       ),
-                    ),
-                    const SizedBox(height: 4),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        CircleAvatar(
-                          backgroundImage: AssetImage(
-                            "assets/images/flag1.png",
-                          ),
-                          radius: 10,
+                      SizedBox(width: 10),
+                      Text(
+                        'GHS',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          color: Colors.grey[600],
                         ),
-                        SizedBox(width: 10),
-                        Text(
-                          'GHS',
-                          style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            color: Colors.grey[600],
-                          ),
-                        ),
-                        SizedBox(width: 20),
-                        Icon(Icons.arrow_drop_down_sharp),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                      SizedBox(width: 20),
+                      Icon(Icons.arrow_drop_down_sharp),
+                    ],
+                  ),
+                ],
               ),
             ),
 
@@ -165,33 +164,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(width: 15),
                   Column(
                     children: [
-                      Stack(
-                        children: [
-                          CircleAvatar(
-                            backgroundImage: AssetImage(
-                              "assets/images/girl.png",
-                            ),
-                            radius: 30,
-                          ),
-                          Positioned(
-                            bottom: 0,
-                            right: 0,
-                            child: CircleAvatar(
-                              backgroundImage: AssetImage(
-                                "assets/images/flag1.png",
-                              ),
-                              radius: 10,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 14),
-                      Text(
-                        "Grace L.",
-                        style: GoogleFonts.poppins(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                        ),
+                      FriendCard(
+                        image_url: "assets/images/girl.png",
+                        name: "Grace L.",
                       ),
                     ],
                   ),
@@ -199,31 +174,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   Column(
                     children: [
-                      Stack(
-                        children: [
-                          CircleAvatar(
-                            backgroundImage: AssetImage("assets/images/LA.png"),
-                            radius: 30,
-                          ),
-                          Positioned(
-                            bottom: 0,
-                            right: 0,
-                            child: CircleAvatar(
-                              backgroundImage: AssetImage(
-                                "assets/images/flag1.png",
-                              ),
-                              radius: 10,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 14),
-                      Text(
-                        "Lawrence A.",
-                        style: GoogleFonts.poppins(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                        ),
+                      FriendCard(
+                        image_url: "assets/images/LA.png",
+                        name: "Lawrence A.",
                       ),
                     ],
                   ),
