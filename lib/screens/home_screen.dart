@@ -30,9 +30,38 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 15),
-            child: IconButton(
-              icon: const Icon(Icons.notifications_none_outlined, size: 30),
-              onPressed: () {},
+            child: Stack(
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.notifications_none_outlined, size: 30),
+                  onPressed: () {
+                    // Add your onPressed functionality here
+                  },
+                ),
+                Positioned(
+                  right: 6,
+                  top: 6,
+                  child: Container(
+                    padding: const EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    constraints: const BoxConstraints(
+                      minWidth: 12,
+                      minHeight: 12,
+                    ),
+                    child: const Text(
+                      '2',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 8,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
