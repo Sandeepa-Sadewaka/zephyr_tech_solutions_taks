@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: BottomNavDemo(), // Use BottomNav as the home widget
+      home: BottomNav(), // Use BottomNav as the home widget
     );
   }
 }
