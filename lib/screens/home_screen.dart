@@ -15,15 +15,20 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Text(
-          'Hi Ehi',
-          style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.w600),
+          'Hi Ehi,',
+          style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.w600, color: Colors.grey),
         ),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.notifications_none_outlined),
-            onPressed: () {},
+          Padding(
+            padding: const EdgeInsets.only(right: 15),
+            child: IconButton(
+              
+              icon: const Icon(Icons.notifications_none_outlined, size: 30),
+              onPressed: () {},
+            ),
           ),
         ],
+        
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
