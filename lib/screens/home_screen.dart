@@ -16,12 +16,15 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text(
-          'Hi Ehi,',
-          style: GoogleFonts.poppins(
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-            color: Colors.grey,
+        title: Padding(
+          padding: const EdgeInsets.only(left: 10),
+          child: Text(
+            'Hi Ehi,',
+            style: GoogleFonts.poppins(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              color: Colors.grey,
+            ),
           ),
         ),
         actions: [
