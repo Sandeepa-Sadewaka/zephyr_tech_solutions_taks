@@ -150,9 +150,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 60,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
-                          color: const Color.fromARGB(255, 209, 209, 209),
+                          color: const Color.fromARGB(255, 225, 224, 224),
                         ),
-                        child: Icon(Icons.add, size: 30, color: Colors.black),
+                        child: Icon(Icons.add, size: 30, color: Colors.grey),
                       ),
                       SizedBox(height: 14),
                       Text(
